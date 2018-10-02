@@ -1,5 +1,5 @@
 {
-  "name": "4msar/coingate-php-api",
+  "name": "4msar/coingate-php",
   "type": "library",
   "description": "CoinGate library for PHP, { Custom method added by MSAR }",
   "version": "3.0.1",
