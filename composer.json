@@ -1,7 +1,7 @@
 {
-  "name": "4msar/coingate-php",
+  "name": "4msar/coingate-php-api",
   "type": "library",
-  "description": "CoinGate library for PHP",
+  "description": "CoinGate library for PHP, { Custom method added by MSAR }",
   "version": "3.0.1",
   "keywords": [
     "coingate",
