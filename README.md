@@ -11,12 +11,12 @@ Please note, that for Sandbox you must generate separate API credentials on <htt
 You can install library via [Composer](http://getcomposer.org/). Run the following command in your terminal:
 
 ```bash
-composer require coingate/coingate-php
+composer require 4msar/coingate-php
 ```
 
 ## Manual Installation
 
-Donwload [latest release](https://github.com/coingate/coingate-php/releases) and include `init.php` file.
+Donwload [latest release](https://github.com/4msar/coingate-php-api/releases) and include `init.php` file.
 
 ```php
 require_once('/path/to/coingate-php/init.php');
@@ -83,6 +83,24 @@ if ($order) {
     # Order Is Not Valid
 }
 ```
+### Getting Merchant All Order
+
+```php
+use CoinGate\CoinGate;
+
+try {
+    $order = \CoinGate\Merchant\Order::get_all();
+
+    if ($order) {
+      var_dump($order);
+    }
+    else {
+      echo 'Order not found';
+    }
+} catch (Exception $e) {
+  echo $e->getMessage(); // BadCredentials Not found App by Access-Key
+}
+```
 
 ### Getting Merchant Order
 
@@ -117,3 +135,7 @@ if ($testConnection !== true) {
   echo $testConnection; // CoinGate\BadCredentials: BadCredentials Not found App by Access-Key
 }
 ```
+
+
+## This is a cloned repository from coingate, but added some extra features.
+like get_all() etc.
