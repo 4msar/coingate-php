@@ -24,7 +24,14 @@ class Order extends Merchant
     {
         return $this->order[$name];
     }
+    
 
+    public static function get_all($authentication = array())
+    {
+        $order = CoinGate::request('/orders', 'GET', array(), $authentication);
+         return new self($order);
+    }
+    
     public static function find($orderId, $options = array(), $authentication = array())
     {
         try {
